@@ -17,8 +17,11 @@ class App extends React.Component{
         score={this.state.score} 
         />
         <Question />
-        <Answer />
-        <Description />
+        <section className="answer-description">
+            <Answer />
+            <Description />
+        </section>
+        <section className="next">Next Level</section>
       </div>
     );
   }

@@ -6,14 +6,15 @@
     }
 body{
     background-color: rgb(41, 40, 40);
+    color: white;
 }
 .main{
-    width: 90%;
+    width: 80%;
     padding-top: 20px;
     margin: 0px auto;
 }
 header{
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 .logo-and-score{
     display: flex;
@@ -22,10 +23,8 @@ header{
 }
 .logo{
     font-size: 24px;
-    color: white;
 }
 .score{
-    color: white;
 }
 .menu{
     display: flex;
@@ -36,9 +35,7 @@ header{
 }
 .menu li{
     background-color: seagreen;
-    text-align: center;
     flex-grow: 6;
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,3 +49,116 @@ header{
 .menu li.active{
     background-color: rgb(138, 196, 138);
 }
+.question{
+    background-color: rgb(85, 83, 83);
+    height: 140px;
+    display: flex;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+.birds-img{
+    width: 180px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.birds-audio{
+    flex: 5;
+    margin: 0px 30px;
+}
+h3{
+    width: 100%;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    font-weight: 800;
+}
+.desc-text{
+    font-size: 14px;
+    font-weight: 500;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    margin-top: 15px;
+}
+.birds-type{
+    font-size: 14px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+.birds-img-small{
+    width: 160px;
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 120px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.birds-audio-small{
+    flex: 3;
+    margin: 0px 20px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+h1{
+    width: 100%;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: 400;
+}
+audio{
+    width: 100%;
+    height: 40px;
+}
+.answer-description{
+    display: flex;
+    margin-bottom: 25px;
+    align-items: stretch;
+}
+
+.answer{
+    flex: 1;
+    border: 1px solid rgb(107, 106, 106);
+    margin-right: 25px;
+    border-radius: 5px;
+    background-color: rgb(85, 83, 83);
+}
+.answer-items{
+    list-style-type: none;
+}
+.answer-items li{
+    border-bottom: 1px solid rgb(107, 106, 106);
+    padding: 15px 20px;
+}
+.answer-items li:last-child{
+    border: none;
+}
+.answer-items li:hover{
+    background-color: rgb(160, 158, 158);
+    cursor: pointer;
+}
+.description{
+    flex: 1;
+    background-color: rgb(85, 83, 83);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    grid-template-rows: repeat(2, 130px);
+    border-radius: 5px;
+}
+.next{
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(85, 83, 83);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.next:hover{
+    cursor: pointer;
+}
+

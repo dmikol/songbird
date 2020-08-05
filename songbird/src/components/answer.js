@@ -4,7 +4,16 @@ class Answer extends React.Component{
 
   render(){
     return(
-      <section>answer</section>
+      <section className="answer">
+        <ul className="answer-items">
+          <li>Лунь</li>
+          <li>Лунь</li> 
+          <li>Лунь</li>
+          <li>Лунь</li>
+          <li>Лунь</li>
+          <li>Лунь</li>
+        </ul>
+      </section>
     );
   }
 }
