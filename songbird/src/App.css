@@ -59,8 +59,10 @@ header{
 }
 .birds-img{
     width: 180px;
-    border: 1px solid white;
     border-radius: 10px;
+    background: url('images/bird.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .birds-audio{
     flex: 5;
@@ -89,11 +91,12 @@ h3{
 }
 .birds-img-small{
     width: 160px;
-    border: 1px solid white;
-    border-radius: 10px;
     height: 120px;
     grid-column: 1/2;
     grid-row: 1/2;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
 }
 .birds-audio-small{
     flex: 3;
@@ -101,6 +104,7 @@ h3{
     grid-column: 2/3;
     grid-row: 1/2;
 }
+
 h1{
     width: 100%;
     border-bottom: 1px solid gray;
@@ -140,14 +144,16 @@ audio{
     background-color: rgb(160, 158, 158);
     cursor: pointer;
 }
+.wrong{
+    color: red;
+}
+.right{
+    color: green;
+}
 .description{
-    flex: 1;
-    background-color: rgb(85, 83, 83);
-    padding: 10px;
     display: grid;
     grid-template-columns: 160px 1fr;
     grid-template-rows: repeat(2, 130px);
-    border-radius: 5px;
 }
 .next{
     height: 30px;
@@ -161,4 +167,12 @@ audio{
 .next:hover{
     cursor: pointer;
 }
-
+.next.active{
+    background-color: seagreen;
+}
+.description-div{
+    flex: 1;
+    background-color: rgb(85, 83, 83);
+    padding: 10px;
+    border-radius: 5px;
+}

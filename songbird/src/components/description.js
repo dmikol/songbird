@@ -3,21 +3,29 @@ import React from "react";
 class Description extends React.Component{
 
   render(){
-    return(
-      <section className="description">
-          <div className="birds-img-small"></div>
-          <div className="birds-audio-small">
-              <h3>Ястреб</h3>
-              <p className="birds-type">Accipiter gentillis</p>
-              <audio controls>
-                  <source src="audio/music.ogg" type="audio/ogg; codecs=vorbis"></source>
-              </audio>
-          </div>
-          <p className="desc-text">Кукушку назвали так из-за особенностей ее песен. 
-              Звонкое «ку-ку» не спутать ни с какой другой птицей. Кукушки не строят гнезда, 
-              их потомство выращивают другие виды пернатых, которым кукушки подбрасывают свои 
-              яйца.</p>
+
+    let message = <p>Послушайте плеер и выберите птицу из списка</p>;
+    if (this.props.show_desc === true) {
+
+      const background = {backgroundImage: 'url(' + this.props.image + ')'}
+
+			message = <section className="description"><div className="birds-img-small" style={background}>
+      </div>
+      <div className="birds-audio-small">
+          <h3>{this.props.name}</h3>
+      <p className="birds-type">{this.props.species}</p>
+          <audio controls>
+              <source src={this.props.audio} type="audio/ogg; codecs=vorbis"></source>
+          </audio>
+      </div>
+      <p className="desc-text">{this.props.description}</p>
       </section>
+		}
+
+    return(
+      <div className="description-div">
+        {message}
+      </div>
     );
   }
 }
