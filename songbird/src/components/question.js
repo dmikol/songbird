@@ -6,7 +6,7 @@ class Question extends React.Component{
     let name = this.props.name;
     
     if(name === undefined){
-      name = "Что за птица?";
+      name = "******";
     }else if(this.props.num === 0){
       name = this.props.name;
       document.getElementsByClassName('birds-img')[0].style.backgroundImage = 'url(' + this.props.image + ')';
@@ -18,11 +18,14 @@ class Question extends React.Component{
      <div className="birds-img"></div>
      <div className="birds-audio">
          <h1>{name}</h1>
-         <audio controls>
+         <audio ref="audio" controls>
              <source src={this.props.audio} type="audio/ogg; codecs=vorbis"></source>
          </audio>
      </div>
  </section>
+  if(this.refs.audio){
+    this.refs.audio.load()
+   }
     return(
       <div className="question-div">
         {question}

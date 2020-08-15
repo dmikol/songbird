@@ -13,6 +13,9 @@ body{
     padding-top: 20px;
     margin: 0px auto;
 }
+
+/***************HEADER********************/
+
 header{
     margin-bottom: 25px;
 }
@@ -23,8 +26,6 @@ header{
 }
 .logo{
     font-size: 24px;
-}
-.score{
 }
 .menu{
     display: flex;
@@ -49,6 +50,9 @@ header{
 .menu li.active{
     background-color: rgb(138, 196, 138);
 }
+
+/**********************QUESTION*********************/
+
 .question{
     background-color: rgb(85, 83, 83);
     height: 140px;
@@ -67,6 +71,26 @@ header{
 .birds-audio{
     flex: 5;
     margin: 0px 30px;
+}
+h1{
+    width: 100%;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: 400;
+}
+audio{
+    width: 100%;
+    height: 40px;
+}
+
+/************DESCRIPTION****************/
+
+.description{
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    grid-template-rows: repeat(2, 130px);
 }
 h3{
     width: 100%;
@@ -104,25 +128,20 @@ h3{
     grid-column: 2/3;
     grid-row: 1/2;
 }
+.description-div{
+    flex: 1;
+    background-color: rgb(85, 83, 83);
+    padding: 10px;
+    border-radius: 5px;
+}
 
-h1{
-    width: 100%;
-    border-bottom: 1px solid gray;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-    font-size: 28px;
-    font-weight: 400;
-}
-audio{
-    width: 100%;
-    height: 40px;
-}
+/**********************ANSWER****************/
+
 .answer-description{
     display: flex;
     margin-bottom: 25px;
     align-items: stretch;
 }
-
 .answer{
     flex: 1;
     border: 1px solid rgb(107, 106, 106);
@@ -150,11 +169,9 @@ audio{
 .right{
     color: green;
 }
-.description{
-    display: grid;
-    grid-template-columns: 160px 1fr;
-    grid-template-rows: repeat(2, 130px);
-}
+
+/***********NEXT************/
+
 .next{
     height: 30px;
     border-radius: 5px;
@@ -170,9 +187,35 @@ audio{
 .next.active{
     background-color: seagreen;
 }
-.description-div{
-    flex: 1;
+
+/*********REPEAT-AND-RESULT**********/
+
+.repeat-div{
     background-color: rgb(85, 83, 83);
-    padding: 10px;
     border-radius: 5px;
+    padding: 20px 100px;
+    text-align: center;
+}
+.celebrate{
+    font-size: 50px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.result{
+    padding-bottom: 15px;
+    border-bottom: 1px solid gray;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.repeat{
+    height: 50px;
+    background-color: rgb(138, 196, 138);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.repeat:hover{
+    cursor: pointer;
+    background-color: rgb(112, 189, 112);
 }

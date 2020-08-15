@@ -35,18 +35,23 @@ class App extends React.Component{
   updateNumAnswer = (value) => {
     this.setState({ numAnswer: value});
     }
+  clickRepeat = () => {
+      this.setState({ level: 0, score: 0});
+    }
   clickNext(e){
     this.setState({ level: this.state.level + 1,
       num: 0, name: undefined, rand: Math.floor(1 + Math.random() * (6 + 1 - 1)),
       show_desc: false, id: 1, numAnswer: 0
     });
   
-    document.querySelectorAll('li').forEach(el => {
-      el.classList.remove('wrong', 'right');
-    });
-    document.getElementsByClassName('birds-img')[0].style.background = 'url("img/bird.jpg") center / cover';
-    nextLevel = <section className="next">Next Level</section>
+      document.querySelectorAll('li').forEach(el => {
+        el.classList.remove('wrong', 'right');
+      });
+      document.getElementsByClassName('birds-img')[0].style.background = 'url("img/bird.jpg") center / cover';
+      nextLevel = <section className="next">Next Level</section>
+    
     }
+    
 
   render(){
    
@@ -55,6 +60,25 @@ class App extends React.Component{
       nextLevel = <section className="next active" onClick={this.clickNext.bind(this)}>Next Level</section>
     }
 
+    let repeat;
+
+    if(this.state.score === 30){
+      repeat =  <section className="repeat-div">
+      <p class="celebrate">Поздравляем!</p>
+      <p class="result">Вы прошли викторину и набрали  максимальный балл</p>
+      <img src="https://live.staticflickr.com/65535/48137123012_393653c2e4.jpg" atl="img" />
+      </section>
+    }else{
+      repeat =  <section className="repeat-div">
+      <p class="celebrate">Поздравляем!</p>
+      <p class="result">Вы прошли викторину и набрали {this.state.score} из 30 возможных баллов</p>
+      <div class="repeat" onClick={this.clickRepeat.bind(this)}>Попробовать еще раз</div>
+      </section>
+    }
+
+    
+
+    if(this.state.level !== 6){
     return(
       <div className="main">
         <Header 
@@ -90,7 +114,17 @@ class App extends React.Component{
         </section>
         {nextLevel}
       </div>
-    );
+    )}else{
+      return(
+        <div className="main">
+        <Header 
+        score={this.state.score} 
+        level={this.state.level}
+        />
+      {repeat}
+      </div>
+      )
+    }
   }
 }
 
