@@ -52,7 +52,6 @@ class App extends React.Component{
     
     }
     
-
   render(){
    
     nextLevel = <section className="next">Next Level</section>
@@ -75,10 +74,8 @@ class App extends React.Component{
       <div class="repeat" onClick={this.clickRepeat.bind(this)}>Попробовать еще раз</div>
       </section>
     }
-
-    
-
     if(this.state.level !== 6){
+      console.log(`Правильный ответ: ${this.state.birds[this.state.level][this.state.rand-1].name}`);
     return(
       <div className="main">
         <Header 
