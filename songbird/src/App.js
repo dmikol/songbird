@@ -70,7 +70,7 @@ class App extends React.Component{
       </section>
     }else{
       repeat =  <section className="repeat-div">
-      <p class="celebrate">Поздравляем!</p>
+       <p class="celebrate">Поздравляем!</p>
       <p class="result">Вы прошли викторину и набрали {this.state.score} из 30 возможных баллов</p>
       <div class="repeat" onClick={this.clickRepeat.bind(this)}>Попробовать еще раз</div>
       </section>

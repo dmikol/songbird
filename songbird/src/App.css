@@ -11,6 +11,7 @@ body{
 .main{
     width: 80%;
     padding-top: 20px;
+    padding-bottom: 20px;
     margin: 0px auto;
 }
 
@@ -196,6 +197,9 @@ h3{
     padding: 20px 100px;
     text-align: center;
 }
+.repeat-div img{
+    width: 100%;
+}
 .celebrate{
     font-size: 50px;
     padding-bottom: 10px;
@@ -218,4 +222,61 @@ h3{
 .repeat:hover{
     cursor: pointer;
     background-color: rgb(112, 189, 112);
+}
+
+/***********ADAPTIVE************/
+
+@media screen and (max-width: 820px) {
+    .menu{
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .menu li{
+        padding: 5px;
+        border-radius: none;
+    }
+    .menu li:first-child{
+        border-radius: 0px;
+    }
+    .menu li:last-child{
+        border-radius: 0px;
+    }
+    .repeat-div{
+        padding: 20px;
+    }
+    .result{
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 580px) {
+    .question{
+        display: block;
+        height: auto;
+        text-align: center;
+    }
+    .birds-img{
+        height: 140px;
+        margin: 0px auto;
+        margin-bottom: 10px;
+    }
+    .answer-description{
+        display: block;
+       
+    }
+    .answer{
+        margin-right: 0px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .description{
+        display: block;
+        text-align: center;
+    }
+    .birds-img-small{
+        margin: 0px auto;
+        margin-bottom: 15px;
+    }
+    .celebrate{
+        font-size: 30px;
+    }
 }

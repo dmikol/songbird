@@ -13,7 +13,7 @@ class Description extends React.Component{
 			message = <section className="description"><div className="birds-img-small" style={background}>
       </div>
       <div className="birds-audio-small">
-          <h3>{this.props.name}</h3>
+      <h3>{this.props.name}</h3>
       <p className="birds-type">{this.props.species}</p>
       <audio ref="audio" controls>
       <source src={this.props.audio} type="audio/ogg; codecs=vorbis"></source>
